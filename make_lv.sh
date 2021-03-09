@@ -24,4 +24,4 @@ done
 echo "Архивируем папку"
 cd dist; zip -r ../.last_version.zip *
 
-rm -r dist
+cd ../; rm -r dist
