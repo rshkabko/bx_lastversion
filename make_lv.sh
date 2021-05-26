@@ -2,7 +2,7 @@
 
 # Create .last_version.zip
 # Author Shkabko R.
-# Repo 
+# Repo
 
 echo "Удаляем папку dist и старую сборку"
 rm -r dist
@@ -14,7 +14,7 @@ rsync -av --progress ./ dist/.last_version --exclude dist/ --exclude fx_bx_mc.sh
 
 echo "Конвертируем файлы с utf-8 to windows-1251 $file"
 cd dist
-find ./ -name "*.php" -o -name "*.html" -o -name "*.css" -o -name "*.js"  -type f |
+find ./.last_version/lang/ -name "*.php" -o -name "*.html" -o -name "*.css" -o -name "*.js"  -type f |
 while read file
 do
   echo " $file"
